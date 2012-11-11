@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
 
     $errors = array();
 
-    if (!$captcha->is_valid && !isset($_GET['nocaptcha'])) {
+    if (!$captcha->is_valid && !(ALLOW_NOCAPTCHA == true && isset($_GET['nocaptcha']))) {
         $errors['captcha'] = 'Please enter the valid anti-robots text';
         goto VIEW;
     }

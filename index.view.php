@@ -8,7 +8,7 @@
     <meta name="keywords" content="msgfmt, gettext, gnu gettext, convert, online, free, po, mo, po file, mo file, po converter">
     <meta name="author" content="Israel Viana">
 
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <style>
     .captcha { margin: 1em 0; display: none; }

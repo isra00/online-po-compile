@@ -38,7 +38,7 @@
           <div class="captcha">
             <script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=<?php print RECAPTCHA_PUB ?>"></script>
             <noscript>
-              <iframe src="http://www.google.com/recaptcha/api/noscript?k=<?php print RECAPTCHA_PUB ?>" height="300" width="500" frameborder="0"></iframe><br>
+              <iframe src="http://www.google.com/recaptcha/api/noscript?k=<?php print RECAPTCHA_PUB ?>" height="300" width="500" style="border:none"></iframe><br>
               <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
               <input type="hidden" name="recaptcha_response_field" value="manual_challenge">
             </noscript>
@@ -47,12 +47,12 @@
           <div class="submit">
             <button type="submit" class="btn btn-success">Convert to .mo</button>
           </div>
-        </div>
+        </div><!-- /.form-actions -->
       </form>
     </div>
     
     <div class="footer">
-        <p>Brought to you by <a href="http://israelviana.es/?utm_source=PoConverter&utm_medium=FooterLink&utm_campaign=PoConverter">Israel Viana</p>
+        <p>Brought to you by <a href="http://israelviana.es/?utm_source=PoConverter&amp;utm_medium=FooterLink&amp;utm_campaign=PoConverter">Israel Viana</a></p>
     </div>
     
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

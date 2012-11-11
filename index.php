@@ -6,7 +6,7 @@ require 'lib/misc.php';
 if (isset($_POST['submit'])) {
 
     @session_start();
-    define('FILE_ID', uniqid('onlinepoconverter', true));
+    define('FILE_ID', md5(uniqid('onlinepoconverter', true)));
     $_SESSION['file_id'] = FILE_ID;
 
     require 'lib/recaptchalib.php';

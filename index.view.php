@@ -11,9 +11,12 @@
     <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <style>
-    .captcha { margin: 1em 0; display: none; }
-    .submit { margin-top: 1em; }
-    .footer { text-align: center; }
+      .captcha { margin: 1em 0; display: none; }
+      .submit { margin-top: 1em; }
+      .footer { text-align: center; }
+      .download-page { text-align: center; }
+      .download { margin-top: 2em; }
+      .download .btn { padding: 15px 25px; }
     </style>
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -27,10 +30,29 @@
     </script>
   </head>
   <body>
+  
+    <?php if (isset($deliver)) : ?>
+    
+    <div class="hero-unit download-page">
+      <h1>Done! Here you have it</h1>
+      <p class="download"><a class="btn btn-large btn-success" href="<?php print $download_url ?>">Download your compiled .mo file</a></p>
+    </div>
+    
+    <?php else : ?>
+  
     <div class="hero-unit">
       <h1>Convert .po files into .mo</h1>
       <p>Quick, easy and for free</p>
       <form method="post" action="<?php echo $_SERVER['REQUEST_URI'] ?>" enctype="multipart/form-data">
+      
+        <?php if (!empty($errors)) : ?>
+        <div class="alert alert-error">
+          <ul>
+            <li><?php print join('</li><li>', $errors) ?></li>
+          </ul>
+        </div>
+        <?php endif ?>
+      
         <div class="form-actions">
           <label for="up">Upload your .po file (max. <?php print formatRawSize(MAX_FILE_SIZE) ?>)</label>
           <input type="file" name="up" id="up" />
@@ -45,11 +67,12 @@
           </div>
           
           <div class="submit">
-            <button type="submit" id="submit" name="submit" class="btn btn-success">Convert to .mo</button>
+            <button type="submit" id="submit" name="submit" class="btn btn-primary">Convert to .mo</button>
           </div>
         </div><!-- /.form-actions -->
       </form>
     </div>
+    <?php endif ?>
     
     <div class="footer">
         <p>Brought to you by <a href="http://israelviana.es/?utm_source=PoConverter&amp;utm_medium=FooterLink&amp;utm_campaign=PoConverter">Israel Viana</a></p>

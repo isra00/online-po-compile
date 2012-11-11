@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', true);
+
 include 'init.php';
 require 'lib/misc.php';
 
@@ -18,14 +21,17 @@ if (isset($_POST['submit'])) {
 
     $errors = array();
 
-    if (!$captcha->is_valid) {
+    if (!$captcha->is_valid && !isset($_GET['nocaptcha'])) {
         $errors['captcha'] = 'Please enter the valid anti-robots text';
+        goto VIEW;
     }
+    
+    $internal_error_message = 'Sorry, but your file could not be uploaded. Please, try again or contact me in ' . CONTACT;
     
     $up = $_FILES['up'];
     
     if (!isset($up['type'])) {
-        $errors['up'] = 'Sorry, but your file could not be uploaded. Please, try again or contact me in ' . CONTACT;
+        $errors['up'] = $internal_error_message;
         goto VIEW;
     }
     
@@ -37,18 +43,33 @@ if (isset($_POST['submit'])) {
         $errors['up'] = 'Sorry, but the file you uploaded is too big. Only files smaller than ' . formatRawSize(MAX_FILE_SIZE) . ' are accepted';
     }
     
-    $local_file = dirname(TMP_DIR) . '/' . FILE_ID . '.po';
+    $local_file = realpath(TMP_DIR) . '/' . FILE_ID . '.po';
     
-    if ($up['error'] || !move_uploaded_file($up['tmp_name'], $local_file)) {
-        $errors['up'] = 'Sorry, but your file could not be uploaded. Please, try again or contact me in ' . CONTACT;
+    if ($up['error']) {
+        $errors['up'] = $internal_error_message;
     }
     
     if (!empty($errors)) {
-        print_r($errors);
         goto VIEW;
     }
+    
+    if (!($res = move_uploaded_file($up['tmp_name'], $local_file))) {
+        $errors['up'] = $internal_error_message;
+    }
+    
+    $local_compiled_file = TMP_DIR . '/' . FILE_ID . '.mo';
+    
+    $compile_output = '';
+    $compile_cmd = "msgfmt -o $local_compiled_file $local_file";
+    $compile_status = exec_cmd($compile_cmd, $compile_output);
+    
+    if (!$compile_status) {
+        $errors[] = 'Sorry, but your file could not be converted. Details: <br><pre>' . join("\n", $compile_output) . '</pre>';
+    } else {
+        $deliver = true;
+        $download_url = FILES_PUBLIC . '/' . FILE_ID . '.mo';
+    }
 }
-
 
 VIEW:
 include 'index.view.php';

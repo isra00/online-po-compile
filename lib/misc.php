@@ -19,3 +19,17 @@ function formatRawSize($bytes) {
         return $output;
     }
 }
+
+/**
+ * Execute a command-line command
+ *
+ * @param string $cmd Command to be executed
+ */
+function exec_cmd($cmd, &$output) {
+    $output = '';
+    $status = null;
+
+    exec("$cmd 2>&1", $output, $status);
+
+    return $status == 0;
+}

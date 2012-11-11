@@ -30,12 +30,12 @@
     <div class="hero-unit">
       <h1>Convert .po files into .mo</h1>
       <p>Quick, easy and for free</p>
-      <form>
+      <form method="post" action="<?php echo $_SERVER['REQUEST_URI'] ?>" enctype="multipart/form-data">
         <div class="form-actions">
-          <label for="up">Upload your .po file (max. 1MB)</label>
+          <label for="up">Upload your .po file (max. <?php print formatRawSize(MAX_FILE_SIZE) ?>)</label>
           <input type="file" name="up" id="up" />
           
-          <div class="captcha">
+          <div class="captcha" <?php if (!empty($errors['captcha'])) : ?>style="display:block"<?php endif?>>
             <script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=<?php print RECAPTCHA_PUB ?>"></script>
             <noscript>
               <iframe src="http://www.google.com/recaptcha/api/noscript?k=<?php print RECAPTCHA_PUB ?>" height="300" width="500" style="border:none"></iframe><br>
@@ -45,7 +45,7 @@
           </div>
           
           <div class="submit">
-            <button type="submit" class="btn btn-success">Convert to .mo</button>
+            <button type="submit" id="submit" name="submit" class="btn btn-success">Convert to .mo</button>
           </div>
         </div><!-- /.form-actions -->
       </form>
@@ -58,8 +58,16 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script>
     $(function() {
-        $('#up').live('change', function() {
+        $("#up").change(function() {
             $(".captcha").show();
+            $("#recaptcha_response_field").focus();
+        });
+        
+        $("#submit").click(function(e) {
+            if ($("#up").val().length == 0) {
+                alert("Please select a .po file to upload");
+                e.preventDefault();
+            }
         });
     });
     </script>

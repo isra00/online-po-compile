@@ -6,7 +6,9 @@ This is a tiny app that allow your users to upload their gettext's .po files and
 Install
 ------
 
-To install this app in your server, you need a working web server with PHP 5+. Clone yourthe repo in your public directory and edit the init.php file to meet your needs:
+To install this app in your server, you need a working web server with PHP 5+ and, of course, the msgfmt command working (if you are using Debian/Ubuntu, you can install it with the `gettext` package). 
+
+Clone the git repo in your public directory and edit the init.php file to meet your needs:
 
  * RECAPTCHA_PUB: put here your ReCaptcha public key. You can get one here: https://www.google.com/recaptcha/admin/create
  * RECAPTCHA_PRIV: your ReCaptcha private key

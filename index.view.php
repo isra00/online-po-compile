@@ -15,7 +15,7 @@
       h1 span:first-child { float: left; }
       h1 .tweet-button { float: left; margin: 15px; }
       h1 .fb-like { float: left; margin: 26px 0 0 30px; }
-	  h1 .tweet { float: left; margin-left: 20px; }
+      h1 .tweet { float: left; margin-left: 20px; }
       h4 { margin-bottom: 2em; }
       .captcha { margin: 1em 0; display: none; }
       .submit { margin-top: 1em; }

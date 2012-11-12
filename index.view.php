@@ -52,12 +52,12 @@
     
     <div class="hero-unit download-page">
       <h1>
-          <span>Done! Here you have it</span>
-		  <div class="fb-like" data-href="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=FB+Like+after+convert&amp;utm_campaign=Share" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false"></div>
-		  <span class="tweet">
-			  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=Tweet+after+convert&amp;utm_campaign=Share" data-via="ivianag" data-size="large" data-hashtags="i18n">Tweet</a></span>
-			  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		  </span>
+        <span>Done! Here you have it</span>
+        <div class="fb-like" data-href="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=FB+Like+after+convert&amp;utm_campaign=Share" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false"></div>
+        <span class="tweet">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=Tweet+after+convert&amp;utm_campaign=Share" data-via="ivianag" data-size="large" data-hashtags="i18n">Tweet</a></span>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </span>
       </h1>
 
       <p class="download"><a class="btn btn-large btn-success" href="<?php print $download_url ?>">Download your compiled .mo file</a></p>
@@ -67,12 +67,12 @@
   
     <div class="hero-unit">
       <h1>
-          <span>Convert .po files into .mo</span>
-		  <div class="fb-like" data-href="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=FB+Like+before+convert&amp;utm_campaign=Share" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false"></div>
-		  <span class="tweet">
-			  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=Tweet+after+convert&amp;utm_campaign=Share" data-via="ivianag" data-size="large" data-hashtags="i18n">Tweet</a></span>
-			  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		  </span>
+        <span>Convert .po files into .mo</span>
+        <div class="fb-like" data-href="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=FB+Like+before+convert&amp;utm_campaign=Share" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false"></div>
+        <span class="tweet">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=Tweet+after+convert&amp;utm_campaign=Share" data-via="ivianag" data-size="large" data-hashtags="i18n">Tweet</a></span>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </span>
       </h1>
 
       <h4>Quick, easy and for free</h4>

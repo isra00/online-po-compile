@@ -67,7 +67,7 @@
           </div>
           
           <div class="submit">
-            <button type="submit" id="submit" name="submit" class="btn btn-primary">Convert to .mo</button>
+            <button type="submit" id="submit" name="submit" class="btn btn-primary">Convert file to .mo</button>
           </div>
         </div><!-- /.form-actions -->
       </form>

@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
         goto VIEW;
     }
     
-	/** FIXME el MIME no vale porque Chrome/Windows envía application/octet-stream!!! Comprobar de otra forma */
+	/** FIXME el MIME no vale porque Chrome/Windows envÃ­a application/octet-stream!!! Comprobar de otra forma */
 	//Ver  http://www.php.net/manual/es/ref.fileinfo.php
     if ($up['type'] != 'text/x-gettext-translation') {
         //$errors['up'] = 'The uploaded file is not a valid .po file: ' . $up['type'];

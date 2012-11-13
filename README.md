@@ -17,6 +17,9 @@ Clone the git repo in your public directory and edit the init.php file to meet y
  * CONTACT: your e-mail address, so your users can contact you if something goes wrong.
  * MAX_FILE_SIZE: max file size for uploaded files, in bytes.
  * ALLOW_NOCAPTCHA: allow bypass Captcha verification by adding the ?nocaptcha=1 argument to the app's URL.
+ * FB_APP_ID: your Facebook app ID, if you want to enable OG app tracking
+ * FB_API_KEY: your Facebook API Key for that App.
+ * MAIN_TITLE: the site title, which is shown in <title> tag, meta description and some other places.
 
 Contact me!
 -----------

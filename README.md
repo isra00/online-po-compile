@@ -3,6 +3,12 @@ gettext's .po to .mo compiler... on-line
 
 This is a tiny app that allow your users to upload their gettext's .po files and download them compiled into .mo files. Compilation is done via msgfmt command.
 
+Requirements
+-------
+
+ * PHP 5+ and FileInfo extension (included in PHP 5.3+).
+ * GNU/Linux (it has not been tested in other operating systems).
+
 Install
 -------
 

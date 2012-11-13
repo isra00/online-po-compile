@@ -32,8 +32,10 @@ if (isset($_POST['submit'])) {
         goto VIEW;
     }
     
+	/** FIXME el MIME no vale porque Chrome/Windows envía application/octet-stream!!! Comprobar de otra forma */
+	//Ver  http://www.php.net/manual/es/ref.fileinfo.php
     if ($up['type'] != 'text/x-gettext-translation') {
-        $errors['up'] = 'The uploaded file is not a valid .po file';
+        //$errors['up'] = 'The uploaded file is not a valid .po file: ' . $up['type'];
     }
     
     if ($up['size'] > MAX_FILE_SIZE) {
@@ -54,10 +56,10 @@ if (isset($_POST['submit'])) {
         $errors['up'] = $internal_error_message;
     }
     
-    $local_compiled_file = TMP_DIR . '/' . FILE_ID . '.mo';
+    $local_compiled_file = FILE_ID . '.mo';
     
     $compile_output = '';
-    $compile_cmd = "msgfmt -o $local_compiled_file $local_file";
+    $compile_cmd = "cd " . TMP_DIR . " && msgfmt -o $local_compiled_file " . FILE_ID . ".po";
     $compile_status = exec_cmd($compile_cmd, $compile_output);
     
     if (!$compile_status) {

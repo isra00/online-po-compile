@@ -2,11 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>On-line .po compiler, convert your .po files into .mo - FREE</title>
+    <title><?php print MAIN_TITLE ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Convert your .po files into .mo on-line for free - online msgfmt">
     <meta name="keywords" content="msgfmt, gettext, gnu gettext, convert, online, free, po, mo, po file, mo file, po converter">
     <meta name="author" content="Israel Viana">
+    <meta property="og:title" content="<?php print MAIN_TITLE ?>">
+    <meta property="og:url" content="http://online-po-compile.israelviana.es/"/>
+    <meta property="og:type" content="website"/>
 
     <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">

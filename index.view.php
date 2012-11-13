@@ -111,7 +111,7 @@
 
         <div class="span5 offset1 explanation">
           <h3>.po and .mo files?</h3>
-          <p>.po is the file format used by GNU gettext translation system. To use it, you need to compile the .po files in a more efficient format, the .mo ones. Here you can compile .po files for free.</p>
+          <p>.po is the file format used by <a href="http://en.wikipedia.org/wiki/Gettext" target="_blank">GNU gettext</a> translation system. To use it, you need to compile the .po files in a more efficient format, the .mo ones. Here you can compile .po files for free.</p>
           <!-- .po es el formato de fichero usado por el sistema de traducción GNU gettext. Para poder usarlo en un programa es necesario compilar los ficheros .po en un formato más eficiente, los .mo. Aquí puedes compilar ficheros .po gratis. -->
         </div>
 

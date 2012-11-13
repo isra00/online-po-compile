@@ -1,0 +1,3 @@
+<files purge.php>
+deny from all
+</files>

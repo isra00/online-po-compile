@@ -8,6 +8,7 @@
     <meta name="keywords" content="msgfmt, gettext, gnu gettext, convert, online, free, po, mo, po file, mo file, po converter">
     <meta name="author" content="Israel Viana">
     <meta property="og:title" content="<?php print MAIN_TITLE ?>">
+    <meta property="og:description" content="Convert your .po files into .mo on-line for free - online msgfmt">
     <meta property="og:url" content="http://online-po-compile.israelviana.es/"/>
     <meta property="og:type" content="website"/>
     <meta property="fb:app_id" content="<?php print FB_APP_ID ?>"/>

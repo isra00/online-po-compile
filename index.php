@@ -68,6 +68,8 @@ if (isset($_POST['submit'])) {
         $deliver = true;
         $download_url = FILES_PUBLIC . '/' . FILE_ID . '.mo';
     }
+    
+    unlink($local_file);
 }
 
 VIEW:

@@ -65,7 +65,7 @@
         </span>
       </h1>
 
-      <p class="download"><a class="btn btn-large btn-success" href="<?php print $download_url ?>">Download your compiled .mo file</a></p>
+      <p class="download"><a data-file-id="<?php print FILE_ID ?>" class="btn btn-large btn-success download-button" href="<?php print $download_url ?>">Download your compiled .mo file</a></p>
     </div>
     
     <?php else : ?>
@@ -131,18 +131,25 @@
         $("#up").change(function() {
             $(".captcha").show();
             $("#recaptcha_response_field").focus();
+            _gaq.push(['_trackEvent', 'Interactions', 'Select file', 'filename', $("#up").val()]);
         });
         
         $("#submit").click(function(e) {
             if ($("#up").val().length == 0) {
                 alert("Please select a .po file to upload");
                 e.preventDefault();
+                _gaq.push(['_trackEvent', 'Form validation', 'Submit without file']);
             } else {
                 if ($("#recaptcha_response_field").val().length == 0) {
                     alert("Please enter the anti-robots text");
                     e.preventDefault();
+                    _gaq.push(['_trackEvent', 'Form validation', 'Submit without captcha']);
                 }
             }
+        });
+        
+        $(".download-button").click(function() {
+            _gaq.push(['_trackEvent', 'Interactions', 'Download', 'File ID', $(this).data("file-id")]);
         });
     });
     </script>

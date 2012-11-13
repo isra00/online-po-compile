@@ -32,11 +32,11 @@ if (isset($_POST['submit'])) {
         goto VIEW;
     }
     
-	/** FIXME el MIME no vale porque Chrome/Windows envía application/octet-stream!!! Comprobar de otra forma */
-	//Ver  http://www.php.net/manual/es/ref.fileinfo.php
-    if ($up['type'] != 'text/x-gettext-translation') {
-        //$errors['up'] = 'The uploaded file is not a valid .po file: ' . $up['type'];
+    $file_info = new finfo(FILEINFO_MIME_TYPE);
+    if ('text/x-po' != $file_info->file($up['tmp_name'])) {
+        $errors['up'] = 'The uploaded file is not a valid .po file, but a <em>' . $up['type'] . '</em>.';
     }
+    unset($file_info);
     
     if ($up['size'] > MAX_FILE_SIZE) {
         $errors['up'] = 'Sorry, but the file you uploaded is too big. Only files smaller than ' . formatRawSize(MAX_FILE_SIZE) . ' are accepted';

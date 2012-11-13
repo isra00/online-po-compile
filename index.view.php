@@ -67,7 +67,7 @@
   
     <div class="hero-unit">
       <h1>
-        <span>Convert .po files into .mo</span>
+        <span>Compile .po files into .mo</span>
         <div class="fb-like" data-href="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=FB+Like+before+convert&amp;utm_campaign=Share" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false"></div>
         <span class="tweet">
           <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=Tweet+after+convert&amp;utm_campaign=Share" data-via="ivianag" data-size="large" data-hashtags="i18n">Tweet</a></span>
@@ -106,7 +106,7 @@
 
         <div class="span5 offset1 explanation">
           <h3>.po and .mo files?</h3>
-          <p>.po is the file format used by GNU gettext translation system. To use it, you need to compile the .po files in a more efficient format, the .po ones. Here you can compile .po files for free.</p>
+          <p>.po is the file format used by GNU gettext translation system. To use it, you need to compile the .po files in a more efficient format, the .mo ones. Here you can compile .po files for free.</p>
           <!-- .po es el formato de fichero usado por el sistema de traducción GNU gettext. Para poder usarlo en un programa es necesario compilar los ficheros .po en un formato más eficiente, los .mo. Aquí puedes compilar ficheros .po gratis. -->
         </div>
 

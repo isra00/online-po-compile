@@ -7,7 +7,7 @@ Requirements
 -------
 
  * PHP 5+ and FileInfo extension (included in PHP 5.3+).
- * GNU/Linux (it has not been tested in other operating systems).
+ * GNU/Linux (it will probably work in other OS, but has not been tested).
 
 Install
 -------

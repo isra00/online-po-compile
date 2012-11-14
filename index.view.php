@@ -13,14 +13,14 @@
     <meta property="og:type" content="website"/>
     <meta property="fb:app_id" content="<?php print FB_APP_ID ?>"/>
 
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/bootstrap.min.css" rel="stylesheet">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <style>
       h1 { overflow: hidden; }
-      h1 span:first-child { float: left; }
+      h1 span:first-child { float: left; line-height: 1.2em; }
       h1 .tweet-button { float: left; margin: 15px; }
       h1 .fb-like { float: left; margin: 26px 0 0 30px; }
-      h1 .tweet { float: left; margin-left: 20px; }
+      h1 .tweet { float: left; margin: 0 0 0 20px; }
       h4 { margin-bottom: 2em; }
       .captcha { margin: 1em 0; display: none; }
       .submit { margin-top: 1em; }
@@ -65,7 +65,7 @@
         </span>
       </h1>
 
-      <p class="download"><a data-file-id="<?php print FILE_ID ?>" class="btn btn-large btn-success download-button" href="<?php print $download_url ?>">Download your compiled .mo file</a></p>
+      <p class="download"><a onclick="_gaq.push(['_trackEvent', 'Interactions', 'Download', 'file_id', '<?php print FILE_ID ?>'])" data-file-id="<?php print FILE_ID ?>" class="btn btn-large btn-success download-button" href="<?php print $download_url ?>">Download your compiled .mo file</a></p>
     </div>
     
     <?php else : ?>
@@ -120,12 +120,12 @@
     <?php endif ?>
     
     <div class="footer">
-      <p>Brought to you by <a href="http://israelviana.es/?utm_source=PoCompiler&amp;utm_medium=FooterLink&amp;utm_campaign=PoCompiler">Israel Viana</a>. Doubts or comments? <a href="http://israelviana.es/contacto/">Contact me</a>!</p>
+      <p>Brought to you by <a rel="author" href="http://israelviana.es/?utm_source=PoCompiler&amp;utm_medium=FooterLink&amp;utm_campaign=PoCompiler">Israel Viana</a>. Doubts or comments? <a href="http://israelviana.es/contacto/">Contact me</a>!</p>
     </div>
     
-    <a href="https://github.com/isra00/online-po-compile"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="This site is Free Software"></a>
+    <a href="https://github.com/isra00/online-po-compile"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/forkme.png" alt="This site is Free Software"></a>
     
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/jquery.min.js"></script>
     <script>
     $(function() {
         $("#up").change(function() {

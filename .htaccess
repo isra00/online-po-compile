@@ -1,3 +1,49 @@
 <files purge.php>
 deny from all
 </files>
+
+Options FollowSymLinks SymLinksIfOwnerMatch
+
+# Contents below are copied from natxet's ApachePlesk
+# See https://github.com/natxet/ApachePlesk/blob/master/conf/vhost.conf
+
+ExpiresActive On
+ExpiresDefault "access plus 1 day"
+
+# Cache
+ExpiresByType text/html "access plus 1 day"
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType text/x-json "access plus 1 day"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/jpg "access plus 1 month"
+
+# Remove etag because we don't use it
+FileETag none
+
+
+<IfModule mod_deflate.c>
+
+    # Compress everything by default
+    SetOutputFilter DEFLATE
+    SetInputFilter DEFLATE
+
+    # Exceptions to compressing:
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.pdf$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.avi$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.mov$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.mp3$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.mp4$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.rm$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI \.plist$ no-gzip dont-vary
+
+    # Exceptions to the exceptions
+    # Below is an example where you get rid of what's above and you explicity compress
+    AddOutputFilterByType DEFLATE application/x-httpd-php application/x-httpd-fastphp text/html
+
+    # Configuration of the compression
+    #DeflateFilterNote ratio
+    #DeflateCompressionLevel 9
+</IfModule>

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: 
+Disallow: /files
+Sitemap: http://online-po-compile.israelviana.es/sitemap.xml
+

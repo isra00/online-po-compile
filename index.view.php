@@ -123,7 +123,7 @@
       <p>Brought to you by <a href="http://israelviana.es/?utm_source=PoCompiler&amp;utm_medium=FooterLink&amp;utm_campaign=PoCompiler">Israel Viana</a>. Doubts or comments? <a href="http://israelviana.es/contacto/">Contact me</a>!</p>
     </div>
     
-    <a href="https://github.com/isra00/online-po-compile"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="This site is Free Software"></a>
+    <a href="https://github.com/isra00/online-po-compile"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/forkme.png" alt="This site is Free Software"></a>
     
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script>

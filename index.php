@@ -69,6 +69,35 @@ if (isset($_POST['submit'])) {
         $download_url = FILES_PUBLIC . '/' . FILE_ID . '.mo';
     }
     
+    mysql_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD);
+    mysql_select_db(MYSQL_SCHEMA);
+    
+    $filename = mysql_real_escape_string($up['name']);
+    $compilation_time = null; // Not implemented... yet.
+    $filesize_po = mysql_real_escape_string(filesize($local_file));
+    $filesize_mo = mysql_real_escape_string(filesize(TMP_DIR . '/' . $local_compiled_file));
+    $file_id = mysql_real_escape_string(FILE_ID);
+    
+    $sql_insert = <<<SQL
+INSERT INTO pocompiler_log (
+    time, 
+    filename, 
+    compilation_time, 
+    filesize_po, 
+    filesize_mo, 
+    file_id
+) VALUES (
+    NOW(),
+    '$filename',
+    '$compilation_time',
+    '$filesize_po',
+    '$filesize_mo',
+    '$file_id'
+)
+SQL;
+    
+    mysql_query($sql_insert);
+    
     unlink($local_file);
 }
 

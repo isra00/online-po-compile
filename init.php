@@ -11,3 +11,7 @@ define('FB_APP_ID', 'your FB app ID');
 define('FB_API_KEY', 'your FB app key');
 define('MAIN_TITLE', 'On-line .po compiler, convert your .po files into .mo - FREE');
 
+define('MYSQL_HOST', '');
+define('MYSQL_USER', '');
+define('MYSQL_PASSWORD', '');
+define('MYSQL_SCHEMA', '');

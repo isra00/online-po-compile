@@ -125,7 +125,7 @@
     
     <a href="https://github.com/isra00/online-po-compile"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/forkme.png" alt="This site is Free Software"></a>
     
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/jquery.min.js"></script>
     <script>
     $(function() {
         $("#up").change(function() {

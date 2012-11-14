@@ -13,7 +13,7 @@
     <meta property="og:type" content="website"/>
     <meta property="fb:app_id" content="<?php print FB_APP_ID ?>"/>
 
-    <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/bootstrap.min.css" rel="stylesheet">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <style>
       h1 { overflow: hidden; }

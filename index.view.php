@@ -58,9 +58,9 @@
     <div class="hero-unit download-page">
       <h1>
         <span>Done! Here you have it</span>
-        <div class="fb-like" data-href="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=FB+Like+after+convert&amp;utm_campaign=Share" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false"></div>
+        <span class="fb-like" data-href="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=FB+Like+after+convert&amp;utm_campaign=Share" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false"></span>
         <span class="tweet">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=Tweet+after+convert&amp;utm_campaign=Share" data-via="ivianag" data-size="large" data-hashtags="i18n">Tweet</a></span>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://online-po-compile.israelviana.es/?utm_source=Share&amp;utm_medium=Tweet+after+convert&amp;utm_campaign=Share" data-via="ivianag" data-size="large" data-hashtags="i18n">Tweet</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </span>
       </h1>

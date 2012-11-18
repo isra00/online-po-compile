@@ -83,6 +83,8 @@
       <h4>Quick, easy and for free</h4>
       <form method="post" action="<?php echo $_SERVER['REQUEST_URI'] ?>" enctype="multipart/form-data" class="row">
       
+        <input type="hidden" name="MAX_FILE_SIZE" value="<?php print MAX_FILE_SIZE ?>" />
+          
         <?php if (!empty($errors)) : ?>
         <div class="alert alert-error">
           <ul>
